@@ -64,8 +64,6 @@ mainvisual
         }
 
         &--facilities {
-            padding-top: 205px;
-
             picture {
                 width: calc(100% - 224px - 67px);
                 max-width: 100%;
@@ -74,6 +72,29 @@ mainvisual
                 margin: 0 67px 0 224px;
                 border-radius: 8px;
                 overflow: hidden;
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    background-color: #fff;
+                    opacity: 0.4;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                }
+
+                @include tab {
+                    width: calc(100% - 150px - 11px);
+                    margin: 0 11px 0 150px;
+                }
+
+                @include sp {
+                    width: calc(100% - 11px - 11px);
+                    margin: 0 11px;
+                    border-radius: 0;
+                }
             }
 
             &::before {
@@ -129,10 +150,21 @@ mainvisual
         letter-spacing: 0.04em;
         z-index: 1;
 
+        @include tab {
+            width: calc(100% - 20px - 20px);
+            margin: 0 20px 48px;
+        }
+
         &-content {
             font-size: 1.5rem;
             line-height: 2.4;
             font-family: $ryo-gothic-plusn-fonts;
+            color: #14263f;
+
+            @include sp {
+                line-height: 1.8;
+                font-size: 1.4rem;
+            }
         }
     }
 
