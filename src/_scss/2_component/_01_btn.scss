@@ -1,0 +1,44 @@
+/*------------------------------------------------------------
+btn
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.c-btn2 {
+    background-color: #0a94eb;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 246px;
+    padding: 12px 24px;
+    color: #fff;
+    position: relative;
+    display: block;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    letter-spacing: 0.04em;
+
+    @include sp {
+        max-width: 181px;
+        padding: 10px 20px;
+        font-size: 1.4rem;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        background-image: url("./assets/img/common/icon-arr-right-white.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 20px;
+        height: 14.44px;
+        top: 50%;
+        right: 24px;
+        transform: translateY(-50%);
+
+        @include sp {
+            width: 16px;
+            height: 11.56px;
+        }
+    }
+}

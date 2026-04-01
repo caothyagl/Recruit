@@ -1,0 +1,140 @@
+/*------------------------------------------------------------
+line
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+/*------------------------------------------------------------
+mainvisual
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.c-mv {
+    position: relative;
+    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+    transition: 0.4s;
+
+    &::before {
+        position: absolute;
+        content: "";
+        background-color: #000;
+        opacity: 0.2;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    &__mv {
+        height: 100%;
+        transition: 0.4s;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            background-color: #0a94eb;
+            width: 240px;
+            height: 240px;
+            bottom: 28px;
+            left: 70px;
+            z-index: 1;
+            transition: 0.4s;
+
+            @include tab {
+                left: 40px;
+            }
+
+            @include sp {
+                width: 120px;
+                height: 120px;
+                left: 11px;
+            }
+
+        }
+    }
+
+    &__content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: #fff;
+        width: 100%;
+        font-size: 6.4rem;
+        line-height: 1.8;
+        font-weight: 700;
+        padding-left: 70px;
+        padding-bottom: 27px;
+        letter-spacing: 0.04em;
+        transition: 0.4s;
+        z-index: 1;
+
+        @include tab {
+            padding-left: 11px;
+            padding-bottom: 30px;
+        }
+
+        @include sp {
+            font-size: 3.2rem;
+        }
+
+        span {
+            padding-left: 120px;
+            padding-bottom: 126px;
+            display: block;
+
+            @include sp {
+                padding-left: 50px;
+                padding-bottom: 60px;
+            }
+        }
+    }
+
+    img,
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+body.is-menu-open {
+    .c-mv {
+        &__mv {
+            &::before {
+                width: 120px;
+                height: 120px;
+                bottom: 77px;
+
+                @include sp {
+                    bottom: 28px;
+                }
+            }
+        }
+
+        &__content {
+            font-size: 3.2rem;
+            padding-bottom: 77px;
+
+            @include sp {
+                padding-bottom: 30px;
+            }
+
+            span {
+                padding-left: 80px;
+                padding-bottom: 60px;
+
+                @include sp {
+                    z-index: 9;
+                    padding-left: 50px;
+                    padding-bottom: 60px;
+                }
+            }
+        }
+    }
+}

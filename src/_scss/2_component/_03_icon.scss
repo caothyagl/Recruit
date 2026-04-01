@@ -1,0 +1,37 @@
+/*------------------------------------------------------------
+icon
+------------------------------------------------------------*/
+
+
+/*
+------------------------------------------------------------*/
+.ic-dot {
+    position: relative;
+    padding-left: 18px;
+    padding-top: 6px;
+    line-height: 1.8;
+    letter-spacing: 0.04em;
+    display: block;
+
+    @include sp {
+        padding-top: 12px;
+        padding-left: 12px;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        background-color: #0a94eb;
+        width: 12px;
+        height: 12px;
+        top: 0;
+        left: 0;
+        border-radius: 4px;
+
+        @include sp {
+            width: 8px;
+            height: 8px;
+            border-radius: 2px;
+        }
+    }
+}

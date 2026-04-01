@@ -1,0 +1,31 @@
+/*------------------------------------------------------------
+title
+------------------------------------------------------------*/
+
+
+/*
+------------------------------------------------------------*/
+.c-title1 {
+    &__en {
+        font-size: 1.6rem;
+        letter-spacing: 0.04em;
+        font-weight: 700;
+        line-height: 1.8;
+
+        @include sp {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__jp {
+        font-size: 4rem;
+        letter-spacing: 0.04em;
+        font-weight: 700;
+        line-height: 1.8;
+        margin-top: 12px;
+
+        @include sp {
+            font-size: 2.4rem;
+        }
+    }
+}

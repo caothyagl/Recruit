@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= (typeof title !="undefined" ? title : "Page title" ) %>
+  </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://use.typekit.net/xtp5lem.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet">
+  {{ meta }}
+  <script type="module" src="/_scss/style.js"></script>
+  {{ head }}
+</head>
+
+<body>
+
+  <%- include('_partials/header'); -%>
+
+    {{ content }}
+
+    <%- include('_partials/footer'); -%>
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+      {{ script }}
+      <script src="/assets/js/common.js"></script>
+</body>
+
+</html>
