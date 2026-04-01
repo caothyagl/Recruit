@@ -1,6 +1,48 @@
 /* Breadcrumb
 ------------------------------------------------------------*/
 .c-breadcrumb {
-	
-}
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 205px;
+    margin-bottom: 12px;
+    margin-right: 120px;
 
+    @include tab {
+        margin-top: 150px;
+        margin-right: 20px;
+    }
+
+    @include sp {
+        margin-top: 80px;
+    }
+
+    ul {
+        display: flex;
+        gap: 32px;
+
+        li {
+            font-size: 1.2rem;
+            font-weight: 500;
+            line-height: 1.8;
+            letter-spacing: 0.04em;
+            position: relative;
+
+            &:not(&:first-child) {
+                &::before {
+                    position: absolute;
+                    content: "";
+                    top: 50%;
+                    left: -16px;
+                    transform: translateY(-50%);
+                    width: 1px;
+                    height: 12px;
+                    background-color: #111;
+                }
+            }
+        }
+
+        .current {
+            color: #838282;
+        }
+    }
+}

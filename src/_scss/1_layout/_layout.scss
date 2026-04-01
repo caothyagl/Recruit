@@ -19,6 +19,14 @@ body {
     &:has(.p-top) {
         .c-header__logo {
             filter: brightness(0) invert(1);
+
+            a {
+                color: #fff;
+
+                span {
+                    border-left: 1px solid #fff;
+                }
+            }
         }
     }
 }
