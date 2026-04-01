@@ -29,6 +29,11 @@ mainvisual
         height: 100%;
     }
 
+    &--facilities {
+        &::before {
+            display: none;
+        }
+    }
 
     &__mv {
         height: 100%;
@@ -56,6 +61,24 @@ mainvisual
                 left: 11px;
             }
 
+        }
+
+        &--facilities {
+            padding-top: 205px;
+
+            picture {
+                width: calc(100% - 224px - 67px);
+                max-width: 100%;
+                height: 100vh;
+                display: block;
+                margin: 0 67px 0 224px;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+
+            &::before {
+                display: none;
+            }
         }
     }
 
@@ -92,6 +115,24 @@ mainvisual
                 padding-left: 50px;
                 padding-bottom: 60px;
             }
+        }
+    }
+
+    &__facilities {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: calc(100% - 75px - 67px);
+        max-width: 100%;
+        display: block;
+        margin: 0 67px 48px 75px;
+        letter-spacing: 0.04em;
+        z-index: 1;
+
+        &-content {
+            font-size: 1.5rem;
+            line-height: 2.4;
+            font-family: $ryo-gothic-plusn-fonts;
         }
     }
 
