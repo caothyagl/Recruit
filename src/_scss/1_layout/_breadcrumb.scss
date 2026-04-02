@@ -3,7 +3,7 @@
 .c-breadcrumb {
     display: flex;
     justify-content: flex-end;
-    margin-top: 205px;
+    margin-top: 172px;
     margin-bottom: 12px;
     margin-right: 120px;
 
@@ -18,7 +18,7 @@
 
     ul {
         display: flex;
-        gap: 32px;
+        gap: 37px;
 
         li {
             font-size: 1.2rem;
@@ -32,10 +32,10 @@
                     position: absolute;
                     content: "";
                     top: 50%;
-                    left: -16px;
+                    left: -20px;
                     transform: translateY(-50%);
-                    width: 1px;
-                    height: 12px;
+                    width: 2px;
+                    height: 10px;
                     background-color: #111;
                 }
             }
