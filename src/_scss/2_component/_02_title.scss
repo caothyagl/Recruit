@@ -2,7 +2,6 @@
 title
 ------------------------------------------------------------*/
 
-
 /*
 ------------------------------------------------------------*/
 .c-title1 {
@@ -42,6 +41,39 @@ title
                 font-size: 2.4rem;
                 padding-left: 0;
             }
+        }
+    }
+}
+
+.c-page-title {
+    .c-page-title__inner {
+        width: 100%;
+        max-width: 1338px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .c-page-title__en {
+        @extend .c-title1__en;
+
+        &.ic-dot {
+            padding-left: 17px;
+            padding-top: 2px;
+        }
+    }
+
+    .c-page-title__jp {
+        @extend .c-title1__jp;
+
+        font-size: 3.2rem;
+        padding: 24px 10px;
+        letter-spacing: 0.04em;
+        border-top: 1px solid #0006;
+        margin-top: 11px;
+
+        @include sp {
+            font-size: 2.4rem;
+            padding: 16px 8px;
         }
     }
 }

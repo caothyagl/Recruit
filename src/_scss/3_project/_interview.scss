@@ -1,0 +1,134 @@
+.p-interview {
+    .c-breadcrumb {
+        margin-top: 172px;
+
+        @include sp {
+            margin-top: 100px;
+        }
+    }
+
+    .c-interview {
+        margin-top: 101px;
+        color: #1e2325;
+
+        @include sp {
+            margin-top: 64px;
+        }
+    }
+
+    .c-interview__inner {
+        padding-block: 142px 204px;
+
+        @include tab {
+            padding-block: 80px;
+        }
+
+        @include sp {
+            padding-block: 40px 56px;
+        }
+    }
+
+    .c-interview__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 64px 24px;
+        margin-top: 69px;
+
+        @include tab {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px 20px;
+        }
+
+        @include sp {
+            grid-template-columns: 1fr;
+            margin-top: 56px;
+            gap: 24px;
+        }
+    }
+
+    .c-interview__item {
+        &:hover {
+            opacity: 1;
+
+            .c-interview__img img {
+                transform: scale(1.05);
+            }
+
+            .c-interview__button {
+                transform: translateX(4px);
+            }
+
+            * {
+                opacity: 1;
+            }
+        }
+    }
+
+    .c-interview__img {
+        aspect-ratio: 384 / 512;
+        border-radius: 8px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.3s;
+        }
+    }
+
+    .c-interview__content {
+        padding: 17px 15px;
+
+        @include sp {
+            padding: 16px 0;
+        }
+    }
+
+    .c-interview__categories {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 11px;
+
+        @include sp {
+            gap: 8px;
+        }
+    }
+
+    .c-interview__category {
+        background-color: #0a94eb;
+        color: #fff;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.4;
+        letter-spacing: 0.04em;
+        border-radius: 99px;
+        padding: 4.5px 16px 3.5px;
+
+        @include sp {
+            font-size: 1.3rem;
+        }
+    }
+
+    .c-interview__title {
+        font-family: $ryo-gothic-plusn-fonts;
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 1.8;
+        margin-top: 9px;
+        padding-inline: 4px 10px;
+
+        @include sp {
+            font-size: 1.6rem;
+            padding-inline: 0;
+        }
+    }
+
+    .c-interview__button {
+        margin-top: 24px;
+
+        @include sp {
+            margin-top: 16px;
+        }
+    }
+}
