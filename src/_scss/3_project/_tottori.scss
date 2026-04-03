@@ -1,9 +1,282 @@
-.p-tottori {
-    .c-career {
-        padding-block: 100px;
+.p-facilities {
+    .c-interview {
+        margin: 105px 0;
+        overflow: hidden;
 
         @include sp {
-            padding-block: 64px;
+            margin: 64px 0;
+        }
+
+        .c-title1 {
+            &__en {
+                @include sp {
+                    padding-top: 12px;
+                }
+            }
+
+            &__jp {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        &__inner {
+            height: 100%;
+            display: flex;
+            gap: 117px;
+            padding-left: calc((100vw - 1240px) / 2 + 20px);
+
+            @media screen and (max-width: 1240px) {
+                padding-left: 20px;
+            }
+
+            @include sp {
+                display: block;
+                padding-left: 0;
+            }
+        }
+
+        &__top {
+            position: relative;
+            height: auto;
+            width: 273px;
+
+            @include sp {
+                width: 100%;
+                padding: 0 11px;
+            }
+        }
+
+        .c-btn2 {
+            margin-top: 18px;
+            margin-left: 8px;
+            max-width: 100%;
+            width: auto;
+
+            @include sp {
+                margin-top: 20px;
+                max-width: 182px;
+                margin-left: 0;
+            }
+        }
+
+        &__nav {
+            position: absolute;
+            display: flex;
+            justify-content: flex-end;
+            gap: 5px;
+            bottom: 0;
+            right: 21px;
+
+            @include sp {
+                position: static;
+                margin-top: 41px;
+                gap: 24px;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                background-color: #0a94eb;
+                outline: none;
+                border: 0;
+                width: 56px;
+                height: 56px;
+                border-radius: 4px;
+                position: static;
+                margin-top: 0;
+                transition: 0.4s;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+
+                @include sp {
+                    width: 32px;
+                    height: 32px;
+
+                    img {
+                        width: 14px;
+                        height: 10.11px;
+                    }
+                }
+
+                svg {
+                    display: none;
+                }
+            }
+        }
+
+        &__slide {
+            width: calc(100% - 300px);
+            margin-top: 104px;
+
+            @include sp {
+                width: 100%;
+                padding-left: 13px;
+                margin-top: 14px;
+            }
+        }
+
+        .c-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            width: 320px !important;
+            opacity: 1;
+
+            @include sp {
+                width: 270px !important;
+            }
+
+            &:hover {
+                figure {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                background-color: #000;
+                opacity: 0.4;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+
+            figure {
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: 0.4s;
+                    opacity: 1;
+                }
+            }
+
+            .c-title1 {
+                position: absolute;
+                top: 40px;
+                left: 0;
+                z-index: 2;
+                color: #fff;
+                font-family: $ryo-gothic-plusn-fonts;
+                padding: 0 16px;
+
+                &__en {
+                    font-size: 2rem;
+                    letter-spacing: 0;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    padding-top: 12px;
+                    padding-left: 5px;
+
+                    @include sp {
+                        font-size: 1.6rem;
+                        padding-top: 8px;
+                    }
+                }
+
+                &__jp {
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    margin-top: 17px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                    @include sp {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+
+            &__content {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 2;
+                color: #fff;
+                font-weight: 700;
+                line-height: 1.8;
+                padding: 10px 60px 0 0;
+                border-top: 1px solid #fff;
+                width: calc(100% - 32px);
+                margin-left: 16px;
+                margin-bottom: 12px;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-family: $ryo-gothic-plusn-fonts;
+
+                @include sp {
+                    font-size: 1.2rem;
+                    width: calc(100% - 16px);
+                    padding-top: 12px;
+                }
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    background-image: url("./assets/img/common/icon-arr-right-white.svg");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    width: 20px;
+                    height: 14.44px;
+                    top: 18px;
+                    right: 20px;
+
+                    @include sp {
+                        width: 16px;
+                        height: 11.56px;
+                        top: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.p-tottori {
+    .c-title1 {
+        &__en {
+            padding-top: 13px;
+            padding-left: 15px;
+
+            @include sp {
+                padding-top: 12px;
+                padding-left: 12px;
+            }
+        }
+
+        &__jp {
+            @include sp {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .c-career {
+        margin-block: 140px;
+
+        @include sp {
+            margin-block: 64px;
         }
 
         &__list {
@@ -15,7 +288,7 @@
         }
 
         &__item {
-            padding: 24px 16px;
+            padding: 23.5px 18px;
             display: grid;
             grid-template-columns: 96px 1fr;
             align-items: center;
@@ -34,6 +307,7 @@
             figure {
                 overflow: hidden;
                 border-radius: 8px;
+                aspect-ratio: 1;
             }
 
             &-title {
@@ -45,6 +319,7 @@
                 line-height: 1.8;
                 letter-spacing: 0.04em;
                 font-weight: 500;
+                color: #000;
 
                 @include sp {
                     font-size: 1.5rem;
@@ -54,10 +329,16 @@
     }
 
     .c-message {
+        margin-block: 200px 80px;
+
+        @include sp {
+            margin-block: 64px;
+        }
+
         &__info {
-            margin-top: 35px;
+            margin-top: 33px;
             display: grid;
-            grid-template-columns: 406px 1fr;
+            grid-template-columns: 407px 1fr;
             align-items: flex-end;
             column-gap: 112px;
 
@@ -97,6 +378,8 @@
                 p {
                     font-size: 1.6rem;
                     font-weight: 700;
+                    letter-spacing: 0.04em;
+                    color: #000;
 
                     @include tab {
                         font-size: 1.4rem;
@@ -115,15 +398,29 @@
             &-ceo {
                 text-align: right;
                 font-weight: 500;
-                margin-top: 67px;
+                margin-top: 68px;
+                color: #1E2325;
+
+                @include sp {
+                    margin-top: 30px;
+                }
 
                 p {
                     font-size: 1.6rem;
+
+                    @include sp {
+                        font-size: 1.4rem;
+                    }
                 }
 
                 h3 {
                     font-size: 2.4rem;
-                    margin-top: 14px;
+                    margin-top: 10px;
+                    font-weight: 500;
+
+                    @include sp {
+                        font-size: 1.8rem;
+                    }
                 }
             }
         }
@@ -131,10 +428,11 @@
 
     .c-environment {
         padding-inline: 24px;
-        margin-block: 143px 198px;
+        margin-block: 150px 189px;
 
         @include sp {
-            margin-block: 80px;
+            margin-block: 64px;
+            padding-inline: 11px;
         }
 
         &__inner {
@@ -142,7 +440,7 @@
             max-width: 1392px;
             margin: 0 auto;
             border-radius: 8px;
-            padding-block: 57px 84px;
+            padding-block: 45px 84px;
             background-image: url("./assets/img/faclities-tottori/bg-envi.jpg");
             background-repeat: no-repeat;
             background-position: center;
@@ -152,6 +450,7 @@
 
             @include sp {
                 padding: 40px 15px;
+                border-radius: 0;
             }
 
             &::before {
@@ -187,6 +486,7 @@
             @include sp {
                 position: static;
                 margin-top: 41px;
+                gap: 24px;
             }
 
             .swiper-button-next,
@@ -263,6 +563,181 @@
                         height: 100%;
                         object-fit: cover;
                     }
+                }
+            }
+        }
+    }
+
+    .c-jobs {
+        &__item {
+            border: 1px solid rgba(0, 0, 0, 0.4);
+            padding: 32px 59px 33px 50px;
+            display: grid;
+            grid-template-columns: 1fr 500px;
+            column-gap: 50px;
+            margin-top: 40px;
+
+            @include tab {
+                grid-template-columns: 1fr 350px;
+                column-gap: 30px;
+                padding-inline: 30px;
+            }
+
+            @include sp {
+                grid-template-columns: repeat(1, 1fr);
+                row-gap: 30px;
+                padding: 20px;
+            }
+
+            .c-title1 {
+                &__en {
+                    padding-top: 13px !important;
+                    padding-left: 13px;
+                }
+
+                &__jp {
+                    margin-top: 0;
+                    color: #000;
+                    padding-left: 0;
+                }
+            }
+
+            &-content {
+                font-size: 1.6rem;
+                color: #000;
+                line-height: 1.8;
+                letter-spacing: 0.04em;
+                font-weight: 500;
+                margin-top: 31px;
+
+                @include sp {
+                    font-size: 1.4rem;
+                    margin-top: 20px;
+                }
+            }
+
+            figure {
+                overflow: hidden;
+                border-radius: 8px;
+                aspect-ratio: 1;
+
+                @include sp {
+                    border-radius: 0;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .c-information {
+        margin-block: 196px 220px;
+
+        @include sp {
+            margin-block: 64px;
+        }
+
+        .c-title1 {
+            &__en {
+                padding-left: 13px;
+            }
+        }
+
+        &__company {
+            display: grid;
+            grid-template-columns: 1fr 622px;
+            column-gap: 50px;
+            margin-top: 20px;
+
+            @include tab {
+                grid-template-columns: 1fr 400px;
+            }
+
+            @include sp {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            &-info {
+                margin-top: 117px;
+
+                @include tab {
+                    margin-top: 50px;
+                }
+
+                @include sp {
+                    margin-top: 0;
+                }
+            }
+
+            &-title {
+                font-size: 2.4rem;
+                font-weight: 500;
+                line-height: 2.4;
+                letter-spacing: 0.04em;
+                color: #14263f;
+
+                @include sp {
+                    font-size: 1.8rem;
+                }
+            }
+
+            ul {
+                margin-top: 9px;
+                margin-left: 63px;
+
+                @include sp {
+                    margin-top: 0;
+                    margin-left: 20px;
+                }
+
+                li {
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    line-height: 2;
+                    color: #14263f;
+
+                    @include sp {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+
+            &-link {
+                margin-top: 58px;
+                margin-left: 8px;
+
+                @include sp {
+                    margin-top: 20px;
+                }
+
+                .c-btn2 {
+                    max-width: 193px;
+
+                    &:not(&:first-child) {
+                        margin-top: 20px;
+                    }
+                }
+            }
+
+            figure {
+                border-radius: 8px;
+                overflow: hidden;
+                aspect-ratio: 622/762;
+
+                @include sp {
+                    margin-bottom: 10px;
+                    border-radius: 0;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
                 }
             }
         }

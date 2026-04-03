@@ -155,15 +155,27 @@ mainvisual
             margin: 0 20px 48px;
         }
 
+        .c-title1 {
+            &__jp {
+                @include sp {
+                    margin-top: 5px !important;
+                }
+            }
+        }
+
         &-content {
             font-size: 1.5rem;
             line-height: 2.4;
             font-family: $ryo-gothic-plusn-fonts;
             color: #14263f;
+            margin-top: 25px;
+            margin-left: 6px;
 
             @include sp {
                 line-height: 1.8;
                 font-size: 1.4rem;
+                margin-top: 0;
+                margin-left: 0;
             }
         }
     }
