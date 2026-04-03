@@ -126,9 +126,11 @@
 
     .c-interview__button {
         margin-top: 24px;
+        margin-left: 4px;
 
         @include sp {
             margin-top: 16px;
+            margin-left: 0;
         }
     }
 }
