@@ -1,0 +1,103 @@
+.p-message {
+    .c-breadcrumb {
+        margin-top: 172px;
+
+        @include sp {
+            margin-top: 100px;
+        }
+    }
+
+    .c-message {
+        margin-top: 101px;
+        color: #1e2325;
+
+        @include sp {
+            margin-top: 64px;
+        }
+    }
+
+    .c-message__inner {
+        padding-block: 181px 199px;
+        display: grid;
+        grid-template-columns: 557fr 572fr;
+        gap: 63px;
+        align-items: start;
+
+        @include tab {
+            padding-block: 100px 120px;
+            gap: 48px;
+        }
+
+        @include sp {
+            grid-template-columns: 1fr;
+            gap: 36px;
+            padding-block: 40px 64px;
+        }
+    }
+
+    .c-message__img {
+        img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    }
+
+    .c-message__meta {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        margin-top: 19px;
+        width: fit-content;
+        margin-left: auto;
+    }
+
+    .c-message__info {
+        span {
+            display: block;
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 1.8;
+            letter-spacing: 0.04em;
+            text-align: right;
+
+            @include sp {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .c-message__name {
+        font-size: 2.4rem;
+        font-weight: 500;
+        line-height: 1.8;
+        letter-spacing: 0.04em;
+
+        @include sp {
+            font-size: 2rem;
+        }
+    }
+
+    .c-message__title {
+        font-size: 2.4rem;
+        font-weight: 500;
+        line-height: 1.8;
+        letter-spacing: 0.04em;
+
+        @include sp {
+            font-size: 2rem;
+        }
+    }
+
+    .c-message__text {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 2.4;
+        letter-spacing: 0.04em;
+        margin-top: 23px;
+
+        @include sp {
+            font-size: 1.5rem;
+        }
+    }
+}

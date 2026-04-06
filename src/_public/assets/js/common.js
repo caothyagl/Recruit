@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 window.addEventListener("load", () => {
   initHamburger();
-  initHeaderActiveOnScroll();
+  initHeaderOnScroll();
   initSwiper();
 });
 
@@ -49,29 +49,43 @@ function initHamburger() {
   });
 }
 
-function initHeaderActiveOnScroll() {
+function initHeaderOnScroll() {
   const header = document.querySelector(".c-header");
+  if (!header) return;
+
   const mainvisual = document.querySelector(".c-mv");
 
-  if (!header || !mainvisual) return;
+  if (mainvisual) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            header.classList.add("is-active");
+          } else {
+            header.classList.remove("is-active");
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 0,
+      },
+    );
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
-          header.classList.add("is-active");
-        } else {
-          header.classList.remove("is-active");
-        }
-      });
-    },
-    {
-      root: null,
-      threshold: 0,
-    },
-  );
+    observer.observe(mainvisual);
+    return;
+  }
 
-  observer.observe(mainvisual);
+  const page = document.querySelector(".js-header-contrast");
+  if (!page) return;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      header.classList.add("is-active");
+    } else {
+      header.classList.remove("is-active");
+    }
+  });
 }
 
 function initSwiper() {
